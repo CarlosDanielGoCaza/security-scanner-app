@@ -35,23 +35,25 @@ body {
 .help {
     font-size: 2rem;
     color: #000;
+    cursor: pointer;
 }
 
 .logo {
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #2c3e50, #4ca1af);
-    padding: 5px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-color: white;
 }
 
 .notifications {
     position: relative;
+    cursor: pointer;
 }
 
 .notification-icon {
@@ -78,7 +80,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 30px;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 .card {
