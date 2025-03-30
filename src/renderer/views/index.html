@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access System</title>
+    <title>Sistema de Acceso</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Bienvenido a Access System</h1>
+    <div class="container">
+        <header class="header">
+            <div class="help">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/100'">
+            </div>
+            <div class="notifications">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">1</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="card-container">
+            <div class="card" id="login-card">
+                <div class="card-image" style="background-image: url('../assets/inicioacceder.png');"></div>
+            </div>
+        
+            
+            <div class="card" id="login-card">
+                <div class="card-image" style="background-image: url('../assets/iniciovisitantes.png');"></div>
+            </div>
+            
+            <div class="card" id="login-card">
+                <div class="card-image" style="background-image: url('../assets/inicioregistro.png');"></div>
+            </div>
+            
+            <div class="card" id="login-card">
+                <div class="card-image" style="background-image: url('../assets/inicioadministrador.png');"></div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="window-size"></div>
+        </footer>
+    </div>
     <script src="../js/index.js"></script>
 </body>
 </html>
