@@ -1,50 +1,79 @@
+/* Estilos base y layout */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: url('../assets/fondoregistrar.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .backgroundwhite,
 .backgroundwhite-bottom {
     width: 100%;
     text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    height: auto; /* Asegurarse que la altura se ajuste al contenido */
 }
 
 .backgroundwhite img,
 .backgroundwhite-bottom img {
     width: 100%;
     height: auto;
+    display: block;
+    max-height: 80px; /* Limitar altura de las imágenes de onda */
 }
 
 .container {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding: 20px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto; /* Permitir scroll si el contenido es muy alto */
+    min-height: 0; /* Corrige problemas de flex en algunos navegadores */
 }
 
 .registro {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 15px;
-    max-width: 800px;
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1000px;
     width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos de tipografía */
 h1 {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* NUEVO ESTILO DE CAMPOS (underline minimalista blanco) */
+/* Estilos del formulario */
 .formulario {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 40px;
     margin-bottom: 30px;
 }
 
@@ -56,8 +85,10 @@ h1 {
 
 .campo label {
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: normal;
     color: #fff;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 .campo input,
@@ -65,16 +96,18 @@ h1 {
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 8px 0;
+    padding: 5px 0;
     font-size: 16px;
     color: #fff;
     outline: none;
     transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .campo input:focus,
 .campo select:focus {
-    border-bottom: 1px solid #28357cb4;
+    border-bottom: 1px solid #5cc7da;
 }
 
 ::placeholder {
@@ -89,54 +122,84 @@ h1 {
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 15px;
+    padding-right: 20px;
 }
+
+/* Estilos de botones */
+/* Estilos de botones */
+/* Importar fuente Ubuntu */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
 
 .botones {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 30px;
+    grid-column: 1 / -1;
 }
 
 .btn-rojo,
 .btn-verde {
-    padding: 10px 20px;
+    padding: 12px 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 100px;
+    min-height: 50px;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-rojo {
-    background-color: #c0392b;
+    background-color: #8b4242;
 }
 
 .btn-verde {
-    background-color: #27ae60;
+    background-color: #4c8c4e;
 }
 
 .btn-rojo:hover {
-    background-color: #e74c3c;
+    background-color: #9e4a4a;
 }
 
 .btn-verde:hover {
-    background-color: #2ecc71;
+    background-color: #56a158;
 }
 
 /* Estilos para los menús desplegables */
 .campo select option {
-    background-color: #000000;
+    background-color: #222;
     color: white;
 }
 
-/* Para asegurar compatibilidad con diferentes navegadores */
-select option {
-    background-color: #000000 !important;
-    color: white !important;
+/* Campo específicos para roles */
+#rol {
+    grid-column: 2;
 }
 
-/* Específicamente para los select de turno y rol */
-#turno option, #rol option {
-    background-color: #000000;
-    color: white;
+/* Responsive: ajuste para pantallas pequeñas */
+@media (max-width: 992px) {
+    .formulario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #rol {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    
+    .registro {
+        padding: 15px;
+    }
 }

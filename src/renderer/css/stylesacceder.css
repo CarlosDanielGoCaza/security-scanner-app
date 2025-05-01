@@ -2,10 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #4A4A4A;
-    height: 100%;
+    overflow: hidden; /* esto quita la barra de scroll */
+    height: 100vh;     /* asegura altura igual a la ventana */
+    width: 100vw;      /* asegura ancho igual a la ventana */
 }
-
-
 
 .container {
     width: 100%;
@@ -22,7 +22,7 @@ html, body {
 }
 
 .backgroundwhite {
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
 }

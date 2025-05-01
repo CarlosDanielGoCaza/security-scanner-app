@@ -1,97 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../css/stylesregistrarusuario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-    <div class="backgroundwhite">
-        <img src="../assets/backgroundwhite.png" alt="Decoración superior">
-    </div>
-
-    <div class="container">
-        <div class="registro">
-            <h1>Registro de nuevo usuario</h1>
-            <form class="formulario" method="POST" action="#"> <!-- Puedes cambiar '#' por tu backend -->
-                
-                <div class="campo">
-                    <label for="nombre"><strong>Nombre:</strong></label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-
-                <div class="campo">
-                    <label for="apellidoP"><strong>Apellido paterno:</strong></label>
-                    <input type="text" id="apellidoP" name="apellidoP" required>
-                </div>
-
-                <div class="campo">
-                    <label for="apellidoM"><strong>Apellido materno:</strong></label>
-                    <input type="text" id="apellidoM" name="apellidoM" required>
-                </div>
-
-                <div class="campo">
-                    <label for="fechaNacimiento"><strong>Fecha de nacimiento:</strong></label>
-                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
-                </div>
-
-                <div class="campo">
-                    <label for="correo"><strong>Correo electrónico:</strong></label>
-                    <input type="email" id="correo" name="correo" required>
-                </div>
-
-                <div class="campo">
-                    <label for="matricula"><strong>Matrícula / Número de trabajador:</strong></label>
-                    <input type="text" id="matricula" name="matricula" required>
-                </div>
-
-                <div class="campo">
-                    <label for="turno"><strong>Turno:</strong></label>
-                    <select id="turno" name="turno" required>
-                        <option value="">Selecciona tu turno</option>
-                        <option value="Matutino">Matutino</option>
-                        <option value="Vespertino">Vespertino</option>
-                        <option value="Mixto">Mixto</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="carrera"><strong>Carrera:</strong></label>
-                    <select id="turno" name="turno" required>
-                      <option value="">Selecciona tu carrera</option>
-                      <option value="Computacion">Computacion</option>
-                      <option value="Quimica">Quimica</option>
-                      <option value="Matematicas">Matematicas</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="telefono"><strong>Número de teléfono:</strong></label>
-                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9+\s-]{10,15}">
-                </div>
-
-                <div class="campo">
-                    <label for="rol"><strong>Rol en la facultad:</strong></label>
-                    <select id="rol" name="rol" required>
-                        <option value="">Selecciona un rol</option>
-                        <option value="Alumno">Alumno</option>
-                        <option value="Docente">Docente</option>
-                        <option value="Administrativo">Administrativo</option>
-                        <option value="Visitante">Visitante</option>
-                    </select>
-                </div>
-            </form>
-            <div class="botones">
-              <button type="button" class="btn-rojo">Regresar</button>
-              <button type="submit" class="btn-verde">Registrarme</button>
-          </div>
+    <div class="layout">
+        <div class="backgroundwhite">
+            <img src="../assets/backgroundwhite.png" alt="Decoración superior">
         </div>
-    </div>
 
-    <div class="backgroundwhite-bottom">
-        <img src="../assets/backgroundwhite-bottom.png" alt="Decoración inferior">
-    </div>
+        <main class="container">
+            <div class="registro">
+                <h1>Registro de nuevo usuario</h1>
+                <form class="formulario" method="POST" action="#">
 
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellidoP">Apellido paterno</label>
+                        <input type="text" id="apellidoP" name="apellidoP" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellidoM">Apellido materno</label>
+                        <input type="text" id="apellidoM" name="apellidoM" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="matricula">Matrícula / Número de trabajador</label>
+                        <input type="text" id="matricula" name="matricula" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="turno">Turno</label>
+                        <select id="turno" name="turno" required>
+                            <option value="Matutino">Matutino</option>
+                            <option value="Vespertino" selected>Vespertino</option>
+                            <option value="Mixto">Mixto</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="carrera">Carrera</label>
+                        <select id="carrera" name="carrera" required>
+                            <option value="Ingeniería en computación">Ingeniería en computación</option>
+                            <option value="Quimica">Química</option>
+                            <option value="Matematicas">Matemáticas</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9+\s-]{10,15}">
+                    </div>
+
+                    <div class="campo" id="rol-container">
+                        <label for="rol">Rol en la facultad</label>
+                        <select id="rol" name="rol" required>
+                            <option value="Alumno" selected>Alumno</option>
+                            <option value="Docente">Docente</option>
+                            <option value="Administrativo">Administrativo</option>
+                            <option value="Visitante">Visitante</option>
+                        </select>
+                    </div>
+
+                    <div class="botones">
+                        <button type="button" class="btn-rojo">Regresar</button>
+                        <button type="submit" class="btn-verde">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <div class="backgroundwhite-bottom">
+            <img src="../assets/backgroundwhite-bottom.png" alt="Decoración inferior">
+        </div>
+        
+        <!-- Script para asegurar que la onda inferior se muestre correctamente -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Asegurar que el layout tenga altura completa
+                const layout = document.querySelector('.layout');
+                const vh = window.innerHeight;
+                layout.style.minHeight = vh + 'px';
+                
+                // Asegurar que la onda inferior sea visible
+                const bottomWave = document.querySelector('.backgroundwhite-bottom');
+                bottomWave.style.display = 'block';
+            });
+        </script>
+    </div>
 </body>
+
 </html>
