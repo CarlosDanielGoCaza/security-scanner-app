@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #4A4A4A;
+    height: 100%;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 699px;
+    background-color: #4A4A4A;
+    overflow: hidden;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.backgroundwhite {
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+
+.backgroundwhite-bottom {
+    position: fixed; /* o absolute, según lo que necesites */
+    width: 100%;
+    bottom: 0;
+}
