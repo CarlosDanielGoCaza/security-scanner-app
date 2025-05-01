@@ -11,7 +11,7 @@ function createWindow() {
     }
   });
 
-  win.loadFile('../renderer/views/index.html');
+  win.loadFile('../renderer/views/registrarusuario.html');
 }
 
 app.whenReady().then(() => {
