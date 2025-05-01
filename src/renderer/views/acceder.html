@@ -13,16 +13,10 @@
         <img src="../assets/backgroundwhite.png">
     </div>
     <button id="btn-volver">Volver al inicio</button>
-    <script>
-        const { ipcRenderer } = require('electron');
-
-        document.getElementById('btn-volver').addEventListener('click', () => {
-            ipcRenderer.send('navigate', 'index'); // Asumiendo que el archivo se llama index.html
-        });
-    </script>
     <div class="backgroundwhite-bottom">
         <img src="../assets/backgroundwhite-bottom.png">
     </div>
+    <script src="../js/acceder.js"></script>
 </body>
 
 </html>
