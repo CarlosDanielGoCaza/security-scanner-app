@@ -1,17 +1,23 @@
 const { app, BrowserWindow, screen } = require('electron');
+const { setupRouting } = require('./router'); // Asegúrate de la ruta correcta
+const path = require('path');
+
+let win;
 
 function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     fullscreenable: true,
     width,
     height,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false // ¡Necesario para que funcione ipcRenderer!
     }
   });
 
-  win.loadFile('../renderer/views/registrarusuario.html');
+  win.loadFile(path.join(__dirname, '..', 'renderer', 'views', 'index.html'));
+  setupRouting(win);
 }
 
 app.whenReady().then(() => {

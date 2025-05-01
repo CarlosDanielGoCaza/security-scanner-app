@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/stylesaccess.css">
+    <link rel="stylesheet" href="../css/stylesacceder.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="backgroundwhite">
         <img src="../assets/backgroundwhite.png">
     </div>
+    <button id="btn-volver">Volver al inicio</button>
+    <script>
+        const { ipcRenderer } = require('electron');
 
+        document.getElementById('btn-volver').addEventListener('click', () => {
+            ipcRenderer.send('navigate', 'index'); // Asumiendo que el archivo se llama index.html
+        });
+    </script>
     <div class="backgroundwhite-bottom">
         <img src="../assets/backgroundwhite-bottom.png">
     </div>
 </body>
+
 </html>
