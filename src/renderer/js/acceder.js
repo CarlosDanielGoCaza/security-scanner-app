@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Asegurar que el layout tenga altura completa
+    // Asegurar que el layout tenga altura completa.
     const layout = document.querySelector('.layout');
     const vh = window.innerHeight;
     layout.style.minHeight = vh + 'px';
